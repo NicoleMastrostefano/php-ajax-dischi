@@ -13,7 +13,6 @@
   <body>
     <?php include __DIR__ . '/partials/header.php'; ?>
     <?php include __DIR__ . '/partials/main.php'; ?>
-
     <footer></footer>
   </body>
 </html>
