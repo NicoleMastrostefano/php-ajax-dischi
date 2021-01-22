@@ -7,7 +7,7 @@
             <h3><?php echo $album['title']; ?> </h3>
             <h4><?php echo $album['author']; ?></h4>
             <small><?php echo $album['year']; ?></small>
-        </div>
+          </div>
         <?php
         }
       ?>
