@@ -1850,14 +1850,30 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: "#app",
   data: {
-    albums: []
+    albums: [],
+    genre: '',
+    genres: []
   },
   mounted: function mounted() {
     var _this = this;
 
+    var self = this;
     axios.get("server.php").then(function (response) {
       _this.albums = response.data;
     });
+  },
+  methods: {
+    filtra: function filtra() {
+      var _this2 = this;
+
+      axios.get("server.php", {
+        params: {
+          genre: this.genre
+        }
+      }).then(function (response) {
+        _this2.albums = response.data;
+      });
+    }
   }
 });
 
